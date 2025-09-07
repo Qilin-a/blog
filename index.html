@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-blue-600">我的博客</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-600">首页</a>
+                    <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600">关于我</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header class="bg-blue-600 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">分享生活与技术的小角落</h1>
+            <p class="text-xl opacity-90">每周更新1-2篇文章，记录成长与思考</p>
+        </div>
+    </header>
+
+    <!-- 最新文章列表 -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-2xl font-bold mb-6 border-b pb-2">最新文章</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- 文章卡片1 -->
+            <a href="article.html" class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 hover:text-blue-600">如何快速上手Tailwind CSS</h3>
+                    <p class="text-gray-600 mb-4">Tailwind CSS是一款实用优先的CSS框架，无需写自定义CSS就能快速实现页面样式，本文分享3个核心技巧...</p>
+                    <div class="text-gray-500 text-sm flex items-center">
+                        <span><i class="fa fa-calendar-o mr-1"></i> 2024年5月10日</span>
+                        <span class="ml-4"><i class="fa fa-comment-o mr-1"></i> 12条评论</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 文章卡片2 -->
+            <a href="article2.html" class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 hover:text-blue-600">个人博客搭建避坑指南</h3>
+                    <p class="text-gray-600 mb-4">从域名购买到服务器部署，新手搭建博客常踩的5个坑，以及对应的解决方案，让你少走弯路...</p>
+                    <div class="text-gray-500 text-sm flex items-center">
+                        <span><i class="fa fa-calendar-o mr-1"></i> 2024年5月3日</span>
+                        <span class="ml-4"><i class="fa fa-comment-o mr-1"></i> 8条评论</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 新增文章卡片3 -->
+            <a href="article3.html" class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 hover:text-blue-600">JavaScript异步编程全解析</h3>
+                    <p class="text-gray-600 mb-4">从回调函数到Promise，再到async/await，详解JavaScript异步编程的演进与最佳实践...</p>
+                    <div class="text-gray-500 text-sm flex items-center">
+                        <span><i class="fa fa-calendar-o mr-1"></i> 2024年4月25日</span>
+                        <span class="ml-4"><i class="fa fa-comment-o mr-1"></i> 15条评论</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 新增文章卡片4 -->
+            <a href="article4.html" class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 hover:text-blue-600">前端性能优化实战指南</h3>
+                    <p class="text-gray-600 mb-4">分享10个实用的前端性能优化技巧，包括资源加载、代码优化、缓存策略等方面的实践经验...</p>
+                    <div class="text-gray-500 text-sm flex items-center">
+                        <span><i class="fa fa-calendar-o mr-1"></i> 2024年4月18日</span>
+                        <span class="ml-4"><i class="fa fa-comment-o mr-1"></i> 23条评论</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 我的个人博客 | 保持热爱，持续分享</p>
+        </div>
+    </footer>
+
+    <!-- 导航栏当前页高亮JS -->
+    <script>
+        // 获取当前页面URL
+        const currentUrl = window.location.href;
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll('nav a');
+        
+        navLinks.forEach(link => {
+            if (link.href === currentUrl) {
+                link.classList.add('bg-blue-50'); // 高亮样式
+            }
+        });
+    </script>
+</body>
+</html>

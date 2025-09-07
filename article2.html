@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客搭建避坑指南 - 我的博客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-blue-600">我的博客</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600">首页</a>
+                    <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600">关于我</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文章内容区 -->
+    <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- 文章标题与信息 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">个人博客搭建避坑指南</h1>
+            <div class="text-gray-500 text-sm flex items-center gap-4">
+                <span><i class="fa fa-calendar-o mr-1"></i> 2024年5月3日</span>
+                <span><i class="fa fa-clock-o mr-1"></i> 阅读时间：8分钟</span>
+                <span><i class="fa fa-comment-o mr-1"></i> <span id="comment-count">8</span>条评论</span>
+            </div>
+        </div>
+
+        <!-- 文章正文 -->
+        <div class="prose max-w-none text-gray-700 space-y-4 mb-12">
+            <p>搭建个人博客是每个程序员或写作爱好者的梦想，但对于新手来说，这个过程中会遇到不少坑。本文总结了我搭建博客时踩过的坑和解决方案，希望能帮助你少走弯路。</p>
+            
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">一、域名选择的坑</h2>
+            <p>很多新手在选择域名时过于随意，导致后期想换域名但成本太高。</p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">避坑建议：</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>尽量选择.com后缀，通用性强</li>
+                <li>域名尽量简短易记，与你的博客主题相关</li>
+                <li>避免使用连字符和数字，影响记忆和输入</li>
+                <li>在注册前查询是否有商标冲突</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">二、服务器选择的坑</h2>
+            <p>服务器是博客的基石，选择不当会导致访问速度慢、稳定性差，甚至数据丢失。</p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">避坑建议：</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>新手可从虚拟主机或轻量应用服务器开始，成本低且易维护</li>
+                <li>根据目标用户群体选择服务器地理位置</li>
+                <li>选择支持一键备份和恢复的服务商</li>
+                <li>不要贪便宜选择不知名的小厂商，稳定性和售后没保障</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">三、博客程序选择的坑</h2>
+            <p>市面上的博客程序众多，选择适合自己的很重要。</p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">推荐方案：</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>WordPress：功能全，插件多，适合新手</li>
+                <li>Hexo/Gatsby：静态博客生成器，速度快，适合技术人员</li>
+                <li>Typecho：轻量级PHP博客程序，资源占用少</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">四、SEO优化的坑</h2>
+            <p>很多人搭建好博客后无人问津，很大原因是忽视了SEO优化。</p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">优化建议：</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>安装SEO插件，合理设置标题、关键词和描述</li>
+                <li>做好内部链接，方便搜索引擎抓取</li>
+                <li>定期更新优质内容，搜索引擎喜欢新鲜内容</li>
+                <li>提交网站到各大搜索引擎的站长平台</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">五、数据备份的坑</h2>
+            <p>最容易被忽视但最重要的环节，数据丢失可能让你前功尽弃。</p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">备份策略：</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>开启自动备份功能，至少每周一次</li>
+                <li>备份文件要异地存储，不要只存在服务器上</li>
+                <li>定期测试备份的恢复功能，确保可用</li>
+            </ul>
+        </div>
+
+        <!-- 返回首页按钮 -->
+        <div class="mt-12 mb-16">
+            <a href="index.html" class="inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                <i class="fa fa-arrow-left mr-1"></i> 返回首页
+            </a>
+        </div>
+
+        <!-- 评论区 -->
+        <div class="mt-16 border-t pt-8">
+            <h2 class="text-2xl font-bold mb-6">评论区</h2>
+            
+            <!-- 评论表单 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                <h3 class="text-lg font-semibold mb-4">发表评论</h3>
+                <form id="comment-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">昵称</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">评论内容</label>
+                        <textarea id="comment" name="comment" rows="4" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                        提交评论
+                    </button>
+                </form>
+            </div>
+            
+            <!-- 评论列表 -->
+            <div id="comments-container" class="space-y-6">
+                <!-- 评论会通过JS动态加载 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 我的个人博客 | 保持热爱，持续分享</p>
+        </div>
+    </footer>
+
+    <!-- 评论功能JS -->
+    <script>
+        // 文章ID，用于区分不同文章的评论
+        const articleId = 'article2';
+        
+        // 页面加载时获取并显示评论
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComments();
+            
+            // 评论表单提交事件
+            document.getElementById('comment-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                submitComment();
+            });
+        });
+        
+        // 加载评论
+        function loadComments() {
+            const comments = JSON.parse(localStorage.getItem(`comments_${articleId}`) || '[]');
+            const container = document.getElementById('comments-container');
+            const commentCount = document.getElementById('comment-count');
+            
+            // 更新评论数量
+            commentCount.textContent = comments.length;
+            
+            // 清空容器
+            container.innerHTML = '';
+            
+            // 如果没有评论，显示提示信息
+            if (comments.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 italic">暂无评论，快来发表第一条评论吧！</p>';
+                return;
+            }
+            
+            // 渲染评论
+            comments.forEach((comment, index) => {
+                const commentElement = document.createElement('div');
+                commentElement.className = 'bg-white p-6 rounded-lg shadow-sm';
+                commentElement.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-semibold text-gray-900">${escapeHTML(comment.name)}</h4>
+                        <span class="text-gray-500 text-sm">${formatDate(comment.date)}</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">${escapeHTML(comment.content)}</p>
+                    <button class="text-red-500 text-sm hover:text-red-700 transition-colors delete-comment" 
+                            data-index="${index}">
+                        <i class="fa fa-trash-o mr-1"></i> 删除
+                    </button>
+                `;
+                container.appendChild(commentElement);
+            });
+            
+            // 为删除按钮添加事件监听
+            document.querySelectorAll('.delete-comment').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const index = parseInt(e.target.dataset.index || e.target.parentElement.dataset.index);
+                    deleteComment(index);
+                });
+            });
+        }
+        
+        // 提交评论
+        function submitComment() {
+            const nameInput = document.getElementById('name');
+            const commentInput = document.getElementById('comment');
+            
+            const name = nameInput.value.trim();
+            const content = commentInput.value.trim();
+            
+            if (!name || !content) {
+                alert('请填写昵称和评论内容');
+                return;
+            }
+            
+            // 创建评论对象
+            const comment = {
+                name: name,
+                content: content,
+                date: new Date().toISOString()
+            };
+            
+            // 从本地存储获取现有评论
+            const comments = JSON.parse(localStorage.getItem(`comments_${articleId}`) || '[]');
+            
+            // 添加新评论到数组开头
+            comments.unshift(comment);
+            
+            // 保存回本地存储
+            localStorage.setItem(`comments_${articleId}`, JSON.stringify(comments));
+            
+            // 重新加载评论
+            loadComments();
+            
+            // 清空表单
+            nameInput.value = '';
+            commentInput.value = '';
+            
+            // 显示成功提示
+            alert('评论发表成功！');
+        }
+        
+        // 删除评论
+        function deleteComment(index) {
+            if (confirm('确定要删除这条评论吗？')) {
+                // 从本地存储获取现有评论
+                const comments = JSON.parse(localStorage.getItem(`comments_${articleId}`) || '[]');
+                
+                // 删除指定索引的评论
+                comments.splice(index, 1);
+                
+                // 保存回本地存储
+                localStorage.setItem(`comments_${articleId}`, JSON.stringify(comments));
+                
+                // 重新加载评论
+                loadComments();
+            }
+        }
+        
+        // 格式化日期
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleString('zh-CN', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+        
+        // 防止XSS攻击，转义HTML特殊字符
+        function escapeHTML(str) {
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+    </script>
+</body>
+</html>
